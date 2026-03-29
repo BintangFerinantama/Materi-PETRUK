@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void baris(int a, int d, int n) {
+    int curr = a;
+    for (int i=1; i<=n; i++) {
+        if (curr < 0) {
+            cout <<"Not Found"<< endl;
+            return;
+        }
+        cout << curr << " ";
+        curr += d;
+    }
+    cout << endl;
+}
+
+int deret(int a, int d, int n) {
+    int curr = a;
+    int sum = 0;
+    for (int i=1; i<=n; i++) {
+        if (curr < 0) {
+            exit (0);
+        }
+        sum += curr;
+        curr += d;
+    }
+    return sum;
+}
